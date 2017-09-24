@@ -32,6 +32,7 @@
     "cli-progress": "1.6.0",
     "commander": "2.11.0",
     "inquirer": "3.3.0",
+    "lodash": "4.17.4",
     "log4js": "2.3.3"
   },
   "devDependencies": {

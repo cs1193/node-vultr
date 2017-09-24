@@ -5,7 +5,8 @@ import progress from 'cli-progress';
 import log4js from 'log4js';
 import {prompt} from 'inquirer';
 
-import {API_ENDPOINT} from './constant';
+import {API_ENDPOINT, API_VERSION} from './constant';
+import {getAPIKey} from './authentication';
 
 const logger = log4js.getLogger();
 
@@ -17,6 +18,8 @@ const bar = new progress.Bar({}, progress.Presets.shades_classic)
 bar.start(100, 0);
 bar.update(100);
 bar.stop();
+
+getAPIKey();
 
 commander
   .version(VERSION)
