@@ -1,10 +1,14 @@
 {
   "name": "node-vultr",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A command line interface for Vultr API",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node ./node_modules/karma/bin/karma start --single-run",
+    "build": "node ./node_modules/webpack/bin/webpack.js --config ./webpack.config.js --progress --colors",
+    "start": "node ./build/lib.js",
+    "preversion": "git checkout master",
+    "postversion": "git push origin master && git push origin master --tags"
   },
   "repository": {
     "type": "git",
@@ -23,13 +27,6 @@
     "url": "https://github.com/cs1193/node-vultr/issues"
   },
   "homepage": "https://github.com/cs1193/node-vultr#readme",
-  "scripts": {
-    "test": "node ./node_modules/karma/bin/karma start --single-run",
-    "build": "node ./node_modules/webpack/bin/webpack.js --config ./webpack.config.js --progress --colors",
-    "start": "node ./build/lib.js",
-    "preversion": "git checkout master",
-    "postversion": "git push origin master && git push origin master --tags"
-  },
   "dependencies": {
     "axios": "0.16.2",
     "commander": "2.11.0",
