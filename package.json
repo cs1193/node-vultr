@@ -17,9 +17,9 @@
   "keywords": [
     "Vultr",
     "API",
-    "CMD",
     "command-line",
-    "cloud-service"
+    "cloud-service",
+    "utility"
   ],
   "author": "Chandresh Rajkumar Manonmani <chandresh.rm@gmail.com> <cs1193@gmail.com> (http://chandreshrm.name)",
   "license": "UNLICENSED",
@@ -29,6 +29,7 @@
   "homepage": "https://github.com/cs1193/node-vultr#readme",
   "dependencies": {
     "axios": "0.16.2",
+    "cli-progress": "1.6.0",
     "commander": "2.11.0",
     "inquirer": "3.3.0"
   },
