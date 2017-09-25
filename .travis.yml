@@ -1,0 +1,14 @@
+sudo: required
+dist: xenial
+language: node_js
+node_js:
+  - "8.1.4"
+matrix:
+  fast_finish: true
+before_install:
+  - echo "Before Install"
+install:
+  - echo "Install"
+  - npm install
+script:
+  - npm run test
