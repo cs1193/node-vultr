@@ -1,3 +1,5 @@
-export function* getAPIKey () {
-  yield console.log('Get API Key');
+export default class Authentication {
+  constructor (apiKey) {
+    this.apiKey = apiKey;
+  }
 }
