@@ -1,14 +1,14 @@
-sudo: required
-dist: xenial
 language: node_js
+sudo: required
+services:
+  - docker
 node_js:
   - "8.6.0"
 matrix:
   fast_finish: true
 before_install:
-  - echo "Before Install"
-install:
-  - echo "Install"
   - npm install
-script:
+install:
   - npm run test
+script:
+  - npm run build
