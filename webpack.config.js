@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const FlowtypePlugin = require('flowtype-loader/plugin');
 
 const PACKAGE = require('./package.json');
 
@@ -9,7 +10,7 @@ const configuration = {
   cache: true,
   context: __dirname,
   entry: {
-    lib: ["./source/index.js"]
+    lib: ["./src/index.js"]
   },
   devtool: "source-map",
   resolve: {
@@ -23,6 +24,8 @@ const configuration = {
       enforce: 'pre',
       use: [{
         loader: 'eslint-loader'
+      }, {
+        loader: 'flowtype-loader'
       }]
     }, {
       test: /\.js$/,
@@ -31,20 +34,12 @@ const configuration = {
         loader: 'babel-loader',
         query: {
           presets: [
-            'es2015',
-            'stage-0'
+            'env',
+            'flow',
+            'es2017'
           ],
           plugins: [
-            'syntax-trailing-function-commas',
-            'transform-async-to-generator',
-            'transform-es2015-destructuring',
-            'transform-es2015-parameters',
-            'transform-es2015-duplicate-keys',
-            'transform-es2015-modules-commonjs',
-            'transform-exponentiation-operator',
-            'transform-decorators-legacy',
             'transform-flow-strip-types',
-            'transform-runtime',
             'syntax-flow'
           ]
         }
@@ -59,7 +54,7 @@ const configuration = {
   output: {
     pathinfo: true,
     filename: "[name].js",
-    path: path.resolve('./build'),
+    path: path.resolve('./lib'),
     libraryTarget: "commonjs2"
   },
   plugins: [
@@ -70,7 +65,8 @@ const configuration = {
         warnings: false
       }
     }),
-    new webpack.BannerPlugin(banner)
+    new webpack.BannerPlugin(banner),
+    new FlowtypePlugin()
   ],
   target: 'node',
   externals: [
