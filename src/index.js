@@ -2,4 +2,8 @@ import debug from 'debug';
 
 const log = debug('NodeVultr:Index');
 
-log('Hello');
+try {
+  log('Hello');
+} catch (error) {
+  log(error);
+}
