@@ -8,6 +8,7 @@
   },
   "scripts": {
     "test": "node ./node_modules/.bin/jest --config=./jest.config.js --coverage",
+    "test:security": "node ./node_modules/nsp/bin/nsp check --reporter checkstyle --output summary",
     "build": "node ./node_modules/webpack/bin/webpack.js --config ./webpack.config.js --progress --colors",
     "start": "node ./lib/lib.js",
     "start:dev": "DEBUG=* node ./lib/lib.js",
@@ -67,6 +68,8 @@
     "jest": "21.2.1",
     "json-loader": "0.5.4",
     "npm-shrinkwrap": "6.1.0",
+    "nsp": "^3.1.0",
+    "nsp-reporter-checkstyle": "^1.1.0",
     "null-loader": "0.1.1",
     "rimraf": "2.6.1",
     "webpack": "3.0.0"

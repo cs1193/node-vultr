@@ -6,3 +6,4 @@ node_modules/
 build
 backup
 .bkp
+.DS_Store
