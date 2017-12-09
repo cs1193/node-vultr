@@ -2,7 +2,7 @@ sudo: required
 dist: xenial
 language: node_js
 node_js:
-  - "8.1.4"
+  - "8.6.0"
 matrix:
   fast_finish: true
 before_install:

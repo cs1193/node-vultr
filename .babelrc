@@ -1,7 +1,8 @@
 {
   "sourceMaps": "both",
   "presets": [
-      "es2015",
-      "stage-0"
+    "env",
+    "flow",
+    "es2017"
   ]
 }
