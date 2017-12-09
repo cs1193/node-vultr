@@ -1,8 +1,21 @@
-import commander from 'commander';
-import { version } from 'package.json';
+import debug from 'debug';
 
-export default const setupCommandLine = () => {
+import commander from 'commander';
+import { version } from '../../package.json';
+
+const log = debug('NodeVultr:Command:Index');
+
+/* eslint-disable-next-line */
+export const setupCommandLine = () => {
   commander
-    .version(version)
+    .version(version);
+
+  commander
+    .command('hello')
+    .action(() => {
+      log('Hello');
+    });
+
+  commander
     .parse(process.argv);
 };
