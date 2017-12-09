@@ -1,9 +1,11 @@
 import debug from 'debug';
 
+import { setupCommandLine } from './command';
+
 const log = debug('NodeVultr:Index');
 
 try {
-  log('Hello');
+  setupCommandLine();
 } catch (error) {
   log(error);
 }
