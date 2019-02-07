@@ -40,7 +40,7 @@
     "config": "1.28.1",
     "debug": "^3.1.0",
     "inquirer": "3.3.0",
-    "lodash": "4.17.4",
+    "lodash": "4.17.11",
     "winston": "^2.4.0"
   },
   "devDependencies": {
