@@ -1,8 +1,0 @@
-{
-  "sourceMaps": "both",
-  "presets": [
-    "env",
-    "flow",
-    "es2017"
-  ]
-}

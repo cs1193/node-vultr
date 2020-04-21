@@ -3,7 +3,7 @@ sudo: required
 services:
   - docker
 node_js:
-  - "8.6.0"
+  - "12.16.2"
 matrix:
   fast_finish: true
 before_install:
@@ -12,5 +12,3 @@ install:
   - npm install
 script:
   - npm run test
-  - npm run test:security
-  - npm run build
