@@ -9,7 +9,9 @@
   "scripts": {
     "test": "./node_modules/.bin/jest --config ./jest.config.js",
     "preversion": "git checkout master",
-    "postversion": "git push origin master && git push origin master --tags"
+    "postversion": "git push origin master && git push origin master --tags",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -41,10 +43,12 @@
     "log-symbols": "^3.0.0",
     "ora": "^4.0.3",
     "update-notifier": "^4.1.0",
-    "yargs": "^15.3.1"
+    "yargs": "^15.3.1",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "jest": "^25.4.0",
     "jest-cli": "^25.4.0"
-  }
+  },
+  "snyk": true
 }
