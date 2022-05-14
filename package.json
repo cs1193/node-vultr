@@ -33,7 +33,7 @@
     "chalk": "^4.0.0",
     "cli-progress": "^3.8.0",
     "cli-table3": "^0.6.0",
-    "columnify": "^1.5.4",
+    "columnify": "^1.6.0",
     "configstore": "^5.0.1",
     "inquirer": "^7.1.0",
     "listr": "^0.14.3",
