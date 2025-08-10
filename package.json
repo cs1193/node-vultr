@@ -35,7 +35,7 @@
     "cli-table3": "^0.6.0",
     "columnify": "^1.5.4",
     "configstore": "^5.0.1",
-    "inquirer": "^7.1.0",
+    "inquirer": "^8.2.7",
     "listr": "^0.14.3",
     "lodash": "^4.17.15",
     "log-symbols": "^3.0.0",
